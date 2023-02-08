@@ -20,3 +20,13 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* heading fonts*/
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* set default font*/
+p, span, strong, a, label, input, li {
+	font-family: 'Poppins', sans-serif;
+}
