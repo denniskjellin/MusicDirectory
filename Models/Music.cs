@@ -28,7 +28,7 @@ namespace MusicDirectory.Models
         [ForeignKey("Artist")] /* Attribute for showing that this is a foreign-key */
         public int ArtistId { get; set; }
 
-        public Artist Artist { get; set; }
+        public Artist? Artist { get; set; }
     }
 
 
