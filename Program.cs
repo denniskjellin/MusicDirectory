@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using MusicDirectory.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Db Connections
+builder.Services.AddDbContext<MusicContext>(options =>
+options.UseSqlite(builder.Configuration.GetConnectionString("DefaultDbString")));
+
 
 var app = builder.Build();
 
