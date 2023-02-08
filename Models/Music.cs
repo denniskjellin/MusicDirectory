@@ -10,7 +10,7 @@ namespace MusicDirectory.Models
 
     public class Artist
     {
-        [Key]
+        [Key] /* Attribute for showing that this is a primary key */
         public int ArtistId { get; set; }
 
         [Required]
@@ -19,16 +19,16 @@ namespace MusicDirectory.Models
 
     public class Album
     {
-        [Key]
+        [Key] /* Attribute for showing that this is a primary key */
         public int AlbumId { get; set; }
 
         [Required]
         public string? Title { get; set; }
 
-        [ForeignKey("Artist")]
+        [ForeignKey("Artist")] /* Attribute for showing that this is a foreign-key */
         public int ArtistId { get; set; }
 
-        public Artist? Artist { get; set; }
+        public Artist Artist { get; set; }
     }
 
 
