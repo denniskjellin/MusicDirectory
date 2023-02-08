@@ -20,6 +20,7 @@ namespace MusicDirectory.Controllers
         }
 
         // GET: Album
+        [Route("/albums")]
         public async Task<IActionResult> Index()
         {
             var musicContext = _context.Albums.Include(a => a.Artist);

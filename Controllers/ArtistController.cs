@@ -20,6 +20,7 @@ namespace MusicDirectory.Controllers
         }
 
         // GET: Artist
+        [Route("/artists")]
         public async Task<IActionResult> Index()
         {
               return _context.Artists != null ? 
