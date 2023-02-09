@@ -30,3 +30,7 @@ h1,h2,h3,h4,h5,h6 {
 p, span, strong, a, label, input, li {
 	font-family: 'Poppins', sans-serif;
 }
+
+.footer {
+  height: 8rem;
+}
