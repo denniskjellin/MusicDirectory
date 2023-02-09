@@ -34,3 +34,7 @@ p, span, strong, a, label, input, li {
 .footer {
   height: 8rem;
 }
+
+.mt-1 {
+  margin-top: 1rem;
+}
