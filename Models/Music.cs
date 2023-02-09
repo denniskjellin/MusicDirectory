@@ -31,23 +31,4 @@ namespace MusicDirectory.Models
         public Artist? Artist { get; set; }
     }
 
-    /* Adding rental functionality */
-
-    public class Renting /* Class for withholding rent info */
-{
-    [Key]
-    public int RentalId { get; set; } /* primary key*/
-
-    [Required]
-    public string? Name { get; set; }
-
-    [ForeignKey("Album")] /* fk taken from album*/
-    public int AlbumId { get; set; }
-
-    public Album? Album { get; set; }
-
-    [Required]
-    public DateTime DateOfRent { get; set; } /*The date of the loan of album*/
-}
-
 }
