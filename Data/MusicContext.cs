@@ -12,5 +12,6 @@ namespace MusicDirectory.Data
 
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Album> Albums { get; set; }
+        public DbSet<MusicDirectory.Models.Renting> Renting { get; set; } = default!;
     }
 }
