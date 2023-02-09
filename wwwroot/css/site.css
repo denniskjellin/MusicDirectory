@@ -19,6 +19,7 @@ html {
 
 body {
   margin-bottom: 60px;
+  background-color: #f5f5f5;
 }
 
 /* heading fonts*/
@@ -38,3 +39,4 @@ p, span, strong, a, label, input, li {
 .mt-1 {
   margin-top: 1rem;
 }
+

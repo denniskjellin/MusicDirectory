@@ -6,3 +6,35 @@
     <h1 class="display-4">Welcome</h1>
     <p>This is Dennis Kjellins MVC page for a collection of great and bad music, if you want to add anything to this Music Database you can first add an artist and then assign a album to this artist. You can also asign a album to an already existing artist!</p>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-12 mt-3">
+      <div class="card index-card">
+        <div class="card-body">
+          <h5 class="card-title">Create Artist</h5>
+          <p class="card-text">Missing your favourite artist? Don't sweat - simply add a new one!</p>
+          <a class="card-text btn btn-primary stretched-link" asp-area="" asp-controller="Artist" asp-action="Create">Create artist</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 mt-3">
+      <div class="card index-card">
+        <div class="card-body">
+          <h5 class="card-title">Artists</h5>
+          <p class="card-text">See all of our different rising and risen stars!</p>
+          <a class="card-text btn btn-primary stretched-link" asp-area="" asp-controller="Artists" asp-action="Index">Go to artists</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-12 mt-3">
+      <div class="card index-card">
+        <div class="card-body">
+          <h5 class="card-title">Explore</h5>
+          <p class="card-text">The world is a big mysterious place and so is also our music collection!</p>
+          <a class="card-text btn btn-primary stretched-link" asp-area="" asp-controller="Albums" asp-action="Index">Album collection</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
