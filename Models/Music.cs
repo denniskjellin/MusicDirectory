@@ -34,14 +34,14 @@ namespace MusicDirectory.Models
         public Artist? Artist { get; set; }
     }
 
-  /*
-  Member table:
-  MemberId - primary key
-  Name - required
-  PhoneNumber (Type phone) required
-  Email (Type e-mail) required
-  */
-        public class Member
+    /*
+    Member table:
+    MemberId - primary key
+    Name - required
+    PhoneNumber (Type phone) required
+    Email (Type e-mail) required
+    */
+    public class Member
     {
         [Key]
         public int MemberId { get; set; }
@@ -61,15 +61,15 @@ namespace MusicDirectory.Models
         public string? Email { get; set; }
     }
 
-  /*
-  Loan table:
-  LoanId - primary key
-  ForeignKey from class of Album (AlbumId)  
-  ForeignKey from class of Member (MemberId)
-  DateTime (Required) Date of loan
-  DateTime - Date of return
+    /*
+    Loan table:
+    LoanId - primary key
+    ForeignKey from class of Album (AlbumId)  
+    ForeignKey from class of Member (MemberId)
+    DateTime (Required) Date of loan
+    DateTime - Date of return
 
-  */
+    */
     public class Loan
     {
         [Key]
@@ -83,15 +83,16 @@ namespace MusicDirectory.Models
         [ForeignKey("Member")]
         public int MemberId { get; set; }
 
+        [Display(Name = "Loaned By")]
         public Member? Member { get; set; } /*Instance of Member*/
 
         [Required]
-        [Display(Name = "Loan Start Date")]
+        [Display(Name = "Start Date")]
         public DateTime LoanDate { get; set; }
 
         [Required]
-        [Display(Name = "Loan End Date")]
-        public DateTime? ReturnDate { get; set; }
+        [Display(Name = "End Date")]
+        public DateTime ReturnDate { get; set; }
     }
 }
 
