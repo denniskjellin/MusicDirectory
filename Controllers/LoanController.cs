@@ -20,6 +20,7 @@ namespace MusicDirectory.Controllers
         }
 
         // GET: Loan
+        [Route("/loans")]
         public async Task<IActionResult> Index()
         {
             var musicContext = _context.Loan.Include(l => l.Album).Include(l => l.Member);

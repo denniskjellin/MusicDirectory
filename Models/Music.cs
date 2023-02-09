@@ -10,6 +10,7 @@ namespace MusicDirectory.Models
         public int ArtistId { get; set; }
 
         [Required]
+        [Display(Name = "Artist")]
         public string? Name { get; set; }
     }
 
@@ -46,14 +47,17 @@ namespace MusicDirectory.Models
         public int MemberId { get; set; }
 
         [Required]
+        [Display(Name = "Member")]
         public string? Name { get; set; }
 
         [Required]
         [Phone]
+        [Display(Name = "Phone")]
         public string? PhoneNumber { get; set; }
 
         [Required]
         [EmailAddress]
+        [Display(Name = "E-mail")]
         public string? Email { get; set; }
     }
 
@@ -82,8 +86,11 @@ namespace MusicDirectory.Models
         public Member? Member { get; set; } /*Instance of Member*/
 
         [Required]
+        [Display(Name = "Loan Start Date")]
         public DateTime LoanDate { get; set; }
 
+        [Required]
+        [Display(Name = "Loan End Date")]
         public DateTime? ReturnDate { get; set; }
     }
 }
