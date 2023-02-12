@@ -165,5 +165,22 @@ namespace MusicDirectory.Controllers
         {
           return (_context.Albums?.Any(e => e.AlbumId == id)).GetValueOrDefault();
         }
+
+        /* SEARCH */
+        public async Task<IActionResult> Search(string searchString) /* searchString = searchWord */
+{
+    if (string.IsNullOrWhiteSpace(searchString)) /* If null, return all albums */
+    {
+        return View("Index", await _context.Albums.Include(a => a.Artist).ToListAsync());
+    }
+
+    /* If not null, take searchString, look for matching letters and return view */
+    var albums = await _context.Albums.Include(a => a.Artist)
+        .Where(a => a.Title.Contains(searchString) || a.Artist.Name.Contains(searchString))
+        .ToListAsync();
+
+    return View("Index", albums);
+}
+
     }
 }
